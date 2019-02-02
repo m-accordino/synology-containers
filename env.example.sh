@@ -2,6 +2,7 @@
 
 export CONFIG_DIR="$(cd $(dirname "${BASH_SOURCE[0]}"); pwd)/config"
 export DOWNLOAD_DIR="/volume1/Data"
+export DOCKER_USER_ID=1023
 export DOCKER_GROUP_ID=100
 
 # app specific config

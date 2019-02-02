@@ -3,6 +3,7 @@ IMAGE="quay.io/jzelinskie/linuxserver-mumble:latest"
 
 function run() {
   sudo docker run -d \
+    -e "PUID=$DOCKER_USER_ID" \
     -e "PGID=$DOCKER_GROUP_ID" \
     -p "$MUMBLE_PORT:64738" \
     -p "$MUMBLE_PORT:64738/udp" \

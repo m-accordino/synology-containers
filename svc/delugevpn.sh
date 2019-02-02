@@ -14,7 +14,7 @@ function run() {
     -e "NAME_SERVERS=209.222.18.222,37.235.1.174,1.1.1.1,8.8.8.8,209.222.18.218,37.235.1.177,1.0.0.1,8.8.4.4" \
     -e "DEBUG=false" \
     -e "UMASK=000" \
-    -e "PUID=1027" \
+    -e "PUID=$DOCKER_USER_ID" \
     -e "PGID=$DOCKER_GROUP_ID" \
     -p "$DELUGEVPN_WEBUI_PORT:8112" \
     -p "$DELUGEVPN_DAEMON_PORT:58846" \

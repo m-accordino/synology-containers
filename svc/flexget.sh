@@ -3,6 +3,7 @@ IMAGE="cpoppema/docker-flexget:latest"
 
 function run() {
   sudo docker run -d \
+    -e "PUID=$DOCKER_USER_ID" \
     -e "PGID=$DOCKER_GROUP_ID" \
     -e "TORRENT_PLUGIN=$FLEXGET_TORRENT_PLUGIN" \
     -e "WEB_PASSWD=$FLEXGET_WEB_PASSWD" \
